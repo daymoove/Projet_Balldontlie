@@ -2,6 +2,9 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from .views import views
 from .auth import auth
+from .teams import teams
+from .match import match
+from .player import player
 from os import path
 from flask_login import LoginManager
 
@@ -19,6 +22,9 @@ def create_app():
 
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')
+    app.register_blueprint(teams, url_prefixes='/')
+    app.register_blueprint(match, url_prefixes='/')
+    app.register_blueprint(player, url_prefixes='/')
 
     from .models import User
 
