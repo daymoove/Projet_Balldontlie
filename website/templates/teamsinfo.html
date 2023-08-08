@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block title %}teams_info{% endblock %}
+
+{% block content %}
+<a href="/teams" class="btn btn-primary">All teams</a>
+<div class="card" style="width: 50rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{full_name}}</h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">{{name}}</h6>
+      <p class="card-text">abbreviation : {{abbreviation}}</p>
+      <p class="card-text">city : {{city}}</p>
+      <p class="card-text"> conference : {{conference}}</p>
+      <p class="card-text"> division: {{division}}</p>
+    </div>
+  </div>
+
+<form method="POST">
+    <button name ='seeplayer' value={{id}}>see player</button>
+</form>
+<h6 >Page : {{page}}</h6>
+
+
+{%for firstname in firstnames%}
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{lastnames[loop.index0]}}</h5>
+      <p class="card-text">{{firstname}}</p>
+      <form method="POST">
+        <button name = "playerinfo" type="submit" class="button_moreinfo" value={{idplayer[loop.index0]}}><a>More Info</a></button>
+    </form>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

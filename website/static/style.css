@@ -1,3 +1,14 @@
-.page {
-    position:relative; top:0px; left:0px; margin-left:0px; margin-right:0px;
-}
+.match-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+  }
+  
+  .team {
+    font-weight: bold;
+  }
+  
+  .date {
+    color: #666;
+  }

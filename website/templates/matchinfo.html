@@ -1,0 +1,24 @@
+{% extends "base.html" %}  {% block title %}Match Info {% endblock %}
+
+{% block content %}
+<a href="/match" class="btn btn-primary">All match</a>
+<div class="card" style="width: 50rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{home_teamname}} vs {{visitor_teamname}}</h5>
+      <p class="card-text">{{date}}</p>
+      <p class="card-text">home_team_score : {{home_team_score}}</p>
+      <p class="card-text">visitor_team_score :{{visitor_team_score}}</p>
+      <p class="card-text">period :{{period}}</p>
+      <p class="card-text">status :{{status}}</p>
+      <p class="card-text">time :{{time}}</p>
+      <p class="card-text">postseason :{{postseason}}</p>
+      <p class="card-text">season :{{season}}</p>
+      <form method="POST">
+        <button name = "team" value={{home_teamid}}><a>{{home_teamname}}</a></button>
+      </form>
+      <form method="POST">
+          <button name = "team" value={{visitor_teamid}}><a>{{visitor_teamname}}</a></button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

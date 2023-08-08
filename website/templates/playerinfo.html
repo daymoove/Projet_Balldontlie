@@ -1,6 +1,7 @@
 {% extends "base.html" %} {% block title %}Player_info{% endblock %}
 
 {% block content %}
+<a href="/player" class="btn btn-primary">All player</a>
 <div class="card" style="width: 50rem;">
     <div class="card-body">
       <h5 class="card-title">{{lastname}}</h5>
@@ -11,4 +12,8 @@
       <p class="card-text"> weight pounds:{{weight_pounds}}</p>
     </div>
   </div>
+
+<form method="POST">
+    <button name ='team' value={{teamid}}>team</button>
+</form>
 {% endblock %}
